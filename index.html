@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoTech Studio | Décryptage Automobile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation principale -->
+  <header class="navbar">
+    <a href="#accueil" class="logo">
+      <i class="fa-solid fa-gauge-high"></i> Auto<span>Tech</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#marches">Modèles Clés <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#marches" onclick="goToSlide(0)"><i class="fa-solid fa-circle dot-genesis"></i> Genesis GV60 (Luxe)</a></li>
+            <li><a href="#marches" onclick="goToSlide(1)"><i class="fa-solid fa-circle dot-xpeng"></i> XPENG G6 (Tech 800V)</a></li>
+            <li><a href="#marches" onclick="goToSlide(2)"><i class="fa-solid fa-circle dot-renault"></i> Renault Scénic E-Tech</a></li>
+          </ul>
+        </li>
+        <li><a href="#hub-tech">Ingénierie & Sécurité</a></li>
+        <li><a href="#studio-comparatif">Studio Comparatif</a></li>
+        <li><a href="#origines">Origines</a></li>
+        <li class="dropdown">
+          <a href="#essais-video">Essais Vidéo <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.youtube.com/watch?v=ltkXoJF8B-E" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube yt-icon"></i> XPENG G6 (Le Vendeur Auto)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=4BuDb6ZACgM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube yt-icon"></i> Scénic E-Tech (Le Vendeur Auto)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=0FBfq4QhIoo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube yt-icon"></i> Genesis GV60 (Caradisiac)</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Accueil / Hero -->
+  <section id="accueil" class="hero">
+    <div class="hero-container">
+      <span class="hero-badge"><i class="fa-solid fa-microchip"></i> BTS CIEL • Projet Web Automobile</span>
+      <h1>L'Électrique de Pointe Décryptée</h1>
+      <p>Confrontation de trois philosophies industrielles : le prestige feutré du <strong>Genesis GV60</strong>, la rupture tarifaire en 800V du <strong>XPENG G6</strong> et l'efficience pragmatique du <strong>Renault Scénic E-Tech</strong>.</p>
+      <div class="hero-actions">
+        <a href="#marches" class="btn-hero"><i class="fa-solid fa-sliders"></i> Découvrir le Carrousel</a>
+        <a href="#hub-tech" class="btn-hero-outline"><i class="fa-solid fa-atom"></i> Technologies & Sécurité</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Carrousel interactif avec onglets et défilement automatique -->
+  <section id="marches" class="carousel-section">
+    <div class="section-header">
+      <h2 class="section-title">Les 3 Références du Moment</h2>
+      <p class="section-desc">Sélectionnez un modèle via les onglets ou laissez défiler la présentation automatique.</p>
+    </div>
+
+    <!-- Onglets de sélection directe du véhicule -->
+    <div class="carousel-tabs-nav">
+      <button class="car-tab active" onclick="goToSlide(0)">
+        <i class="fa-solid fa-gem dot-genesis"></i> Genesis GV60
+      </button>
+      <button class="car-tab" onclick="goToSlide(1)">
+        <i class="fa-solid fa-bolt dot-xpeng"></i> XPENG G6
+      </button>
+      <button class="car-tab" onclick="goToSlide(2)">
+        <i class="fa-solid fa-car-side dot-renault"></i> Renault Scénic E-Tech
+      </button>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        
+        <!-- Slide 0 : Genesis -->
+        <article class="carousel-slide slide-gv60 active">
+          <span class="brand-pill pill-genesis">Haut de Gamme Sud-Coréen • Prestige & Silence</span>
+          <h3>Genesis GV60 • Le Cocon Haute Couture</h3>
+          <p>Alternative luxueuse aux références allemandes : amortissement piloté par caméra prédictive (Preview ECS), insonorisation de premier ordre et sphère de cristal pivotante Crystal Sphere.</p>
+          <div class="specs-chips">
+            <div class="spec-chip"><strong>800 V</strong><span>Architecture E-GMP</span></div>
+            <div class="spec-chip"><strong>Preview ECS</strong><span>Suspension Caméra</span></div>
+            <div class="spec-chip"><strong>Feuilleté</strong><span>Double Vitrage Acoustique</span></div>
+          </div>
+        </article>
+
+        <!-- Slide 1 : XPENG -->
+        <article class="carousel-slide slide-g6">
+          <span class="brand-pill pill-xpeng">Disruption Technologique • Rapport Équipement/Prix</span>
+          <h3>XPENG G6 • Le Challenger Haute Tension</h3>
+          <p>SUV coupé chinois intégrant une architecture 800V SiC de série : recharge de 10 à 80 % en 12 à 15 minutes, châssis monobloc en fonderie Gigacasting et aides à la conduite complètes.</p>
+          <div class="specs-chips">
+            <div class="spec-chip"><strong>451 kW</strong><span>Pic Recharge Max</span></div>
+            <div class="spec-chip"><strong>12 min</strong><span>10 à 80 % Réalisés</span></div>
+            <div class="spec-chip"><strong>SiC 800V</strong><span>Carbure de Silicium</span></div>
+          </div>
+        </article>
+
+        <!-- Slide 2 : Renault -->
+        <article class="carousel-slide slide-scenic">
+          <span class="brand-pill pill-renault">Milieu de Gamme Européen • Voiture de l'Année</span>
+          <h3>Renault Scénic E-Tech • L'Équilibre Idéal</h3>
+          <p>Équilibre exemplaire sur routes européennes : masse maîtrisée sous 1 890 kg, autonomie WLTP jusqu'à 625 km et intégration native de l'environnement Google OpenR Link.</p>
+          <div class="specs-chips">
+            <div class="spec-chip"><strong>625 km</strong><span>Autonomie WLTP</span></div>
+            <div class="spec-chip"><strong>87 kWh</strong><span>Grande Batterie</span></div>
+            <div class="spec-chip"><strong>OpenR Link</strong><span>Google Automotive OS</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="carousel-ctrl ctrl-prev" id="btnPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-ctrl ctrl-next" id="btnNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Section Hub Ingénierie & Sécurité -->
+  <section id="hub-tech" class="hub-container">
+    <div class="section-header">
+      <h2 class="section-title">Hub Ingénierie & Sécurité Routière</h2>
+      <p class="section-desc">Sélectionnez un modèle pour afficher ses brevets exclusifs et ses dispositifs ADAS.</p>
+    </div>
+
+    <div class="model-selector-bar">
+      <button class="model-nav-btn active-genesis" id="btnModelGenesis" onclick="selectModelHub('genesis')">
+        <i class="fa-solid fa-gem dot-genesis"></i> Genesis GV60
+      </button>
+      <button class="model-nav-btn" id="btnModelXpeng" onclick="selectModelHub('xpeng')">
+        <i class="fa-solid fa-bolt dot-xpeng"></i> XPENG G6
+      </button>
+      <button class="model-nav-btn" id="btnModelRenault" onclick="selectModelHub('renault')">
+        <i class="fa-solid fa-car-side dot-renault"></i> Renault Scénic E-Tech
+      </button>
+    </div>
+
+    <div class="hub-content-card" id="hubCard"></div>
+  </section>
+
+  <!-- Section Studio Comparatif -->
+  <section id="studio-comparatif" class="studio-container">
+    <div class="section-header">
+      <h2 class="section-title">Studio Comparatif</h2>
+      <p class="section-desc">Basculez entre les domaines techniques pour analyser les écarts réels.</p>
+    </div>
+
+    <div class="studio-tabs">
+      <button class="tab-btn active" onclick="switchTopic('recharge', this)">
+        <i class="fa-solid fa-bolt-lightning"></i> ⚡ Architecture & Recharge
+      </button>
+      <button class="tab-btn" onclick="switchTopic('confort', this)">
+        <i class="fa-solid fa-couch"></i> 🛋️ Châssis & Insonorisation
+      </button>
+      <button class="tab-btn" onclick="switchTopic('multimedia', this)">
+        <i class="fa-solid fa-microchip"></i> 🧠 Multimédia & Logiciel
+      </button>
+      <button class="tab-btn" onclick="switchTopic('budget', this)">
+        <i class="fa-solid fa-tag"></i> 💶 Rapport Prix / Prestations
+      </button>
+    </div>
+
+    <div class="comparison-cards-grid" id="comparisonGrid"></div>
+  </section>
+
+  <!-- Section Origines des constructeurs -->
+  <section id="origines" class="accordion-section">
+    <div class="section-header">
+      <h2 class="section-title">Origines des Constructeurs</h2>
+      <p class="section-desc">Dépliez l'historique et la stratégie industrielle de chaque marque.</p>
+    </div>
+
+    <div class="accordion-item active">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <span><i class="fa-solid fa-gem dot-genesis"></i> Genesis Motors — La vision grand luxe de Hyundai</span>
+        <i class="fa-solid fa-chevron-down chevron"></i>
+      </button>
+      <div class="accordion-body">
+        <div class="brand-meta">
+          <span class="meta-tag">Séoul, Corée du Sud</span>
+          <span class="meta-tag">Fondation : 2015</span>
+          <span class="meta-tag">Segment : Grand Tourisme & Prestige</span>
+        </div>
+        <p>Créée par Hyundai Motor Group pour affronter Mercedes-Benz et BMW, Genesis applique le concept coréen d'hospitalité <em>« Son-nim »</em> : habitacle raffiné, insonorisation poussée, cuir Nappa et technologie biométrique avancée.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <span><i class="fa-solid fa-bolt dot-xpeng"></i> XPENG Motors — La culture du logiciel et de l'IA</span>
+        <i class="fa-solid fa-chevron-down chevron"></i>
+      </button>
+      <div class="accordion-body">
+        <div class="brand-meta">
+          <span class="meta-tag">Guangzhou, Chine</span>
+          <span class="meta-tag">Fondation : 2014</span>
+          <span class="meta-tag">Segment : High-Tech & Mobilité Électrique</span>
+        </div>
+        <p>Soutenu par des acteurs comme Alibaba et Foxconn, XPENG est un constructeur orienté "software-first". Sa stratégie consiste à démocratiser le 800V et la conduite assistée par puces NVIDIA Orin-X à des tarifs inférieurs aux concurrents directs.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header" onclick="toggleAccordion(this)">
+        <span><i class="fa-solid fa-car-side dot-renault"></i> Renault E-Tech — L'ingénierie automobile française</span>
+        <i class="fa-solid fa-chevron-down chevron"></i>
+      </button>
+      <div class="accordion-body">
+        <div class="brand-meta">
+          <span class="meta-tag">Douai / Flins, France</span>
+          <span class="meta-tag">Fondation : 1898</span>
+          <span class="meta-tag">Segment : Généraliste Supérieur Familial</span>
+        </div>
+        <p>Pionnier de l'électromobilité avec la Zoé puis la division Ampere, Renault fabrique le Scénic à Douai. Il applique la philosophie des « voitures à vivre » : gabarit adapté aux routes européennes, toucher de route rigoureux et système Google Automotive intégré.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Essais Vidéo YouTube -->
+  <section id="essais-video" class="video-section">
+    <div class="section-header">
+      <h2 class="section-title">Essais Vidéo Sélectionnés</h2>
+      <p class="section-desc">Retrouvez les tests détaillés de nos trois modèles par la presse automobile spécialisée.</p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-screen">
+          <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          <span class="video-duration">38:32</span>
+        </div>
+        <div class="video-card-body">
+          <div class="creator-tag"><i class="fa-solid fa-circle-check"></i> Le Vendeur Automobiles</div>
+          <h3>Essai XPENG G6 – Le TUEUR du marché !</h3>
+          <p>Recharge record à 451 kW (10 à 80 % en 12 min), confort routier et comparaison directe face au Tesla Model Y.</p>
+          <a href="https://www.youtube.com/watch?v=ltkXoJF8B-E" target="_blank" rel="noopener noreferrer" class="btn-yt-link">
+            <i class="fa-brands fa-youtube"></i> Voir l'essai XPENG G6
+          </a>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-screen">
+          <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          <span class="video-duration">39:17</span>
+        </div>
+        <div class="video-card-body">
+          <div class="creator-tag"><i class="fa-solid fa-circle-check"></i> Le Vendeur Automobiles</div>
+          <h3>Essai Scénic E-Tech – Voiture de l'Année</h3>
+          <p>Test de la finition Esprit Alpine : plus de 600 km d'autonomie, toit vitré Solarbay opacifiant et Google OpenR Link.</p>
+          <a href="https://www.youtube.com/watch?v=4BuDb6ZACgM" target="_blank" rel="noopener noreferrer" class="btn-yt-link">
+            <i class="fa-brands fa-youtube"></i> Voir l'essai Scénic E-Tech
+          </a>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-screen">
+          <div class="play-btn-circle"><i class="fa-solid fa-play"></i></div>
+          <span class="video-duration">12:57</span>
+        </div>
+        <div class="video-card-body">
+          <div class="creator-tag"><i class="fa-solid fa-circle-check"></i> Caradisiac</div>
+          <h3>Essai Genesis GV60 : Face aux rivaux allemands</h3>
+          <p>Test dynamique du SUV coupé : plateforme 800V E-GMP, double vitrage acoustique et écran panoramique de 27 pouces.</p>
+          <a href="https://www.youtube.com/watch?v=0FBfq4QhIoo" target="_blank" rel="noopener noreferrer" class="btn-yt-link">
+            <i class="fa-brands fa-youtube"></i> Voir l'essai Genesis GV60
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer id="contact">
+    <p><strong>AutoTech Blog</strong> — Projet BTS CIEL Lycée Saint-Éloi</p>
+    <p>Conception & Développement par <strong>Iyan GOFFENEY</strong> & <strong>Mathis DIETRICH</strong></p>
+    <p class="footer-sub">Architecture modulaire séparée : HTML5 sémantique, CSS3 externe et ES6 JavaScript</p>
+  </footer>
+
+</body>
+</html>
