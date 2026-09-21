@@ -1,4 +1,4 @@
-# ⚡ AutoTech Studio — Décryptage Automobile Électrique
+#  AutoTech Studio — Décryptage Automobile Électrique
 
 Projet de développement web réalisé dans le cadre du **BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique)** au Lycée Saint-Éloi.
 
