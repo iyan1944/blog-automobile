@@ -1,34 +1,37 @@
-#  AutoTech Studio — Décryptage Automobile Électrique
+# AutoTech Studio — Projet WEB
 
-Projet de développement web réalisé dans le cadre du **BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique)** au Lycée Saint-Éloi.
+## Présentation
+AutoTech Studio est un web blog automobile bilingue français/anglais consacré à trois véhicules électriques : Genesis GV60, XPeng G6 et Renault Scénic.
 
-* **Développeurs :** Iyan GOFFENEY & Mathis DIETRICH
-* **Dépôt GitHub :** [https://github.com/iyan1944/blog-automobile](https://github.com/iyan1944/blog-automobile)
-* **Site en ligne (GitHub Pages) :** [https://iyan1944.github.io/blog-automobile/](https://iyan1944.github.io/blog-automobile/)
+## Objectif
+Le projet met en œuvre les attendus du projet WEB : 4 à 5 pages, texte, formulaire de contact, images et vidéo, bilinguisme, navigation entre pages, responsive design et charte graphique cohérente.
 
----
+## Pages
+- `index.html` : accueil et contenu éditorial.
+- `comparatif.html` : comparatif dynamique et FAQ.
+- `technologies.html` : Hub ingénierie/sécurité, Gantt, tests et sécurité.
+- `medias.html` : images, vidéo intégrée et ressources vidéo.
+- `contact.html` : formulaire de contact et informations de livraison.
 
-##  Présentation du Projet
-**AutoTech Studio** est un site web interactif dédié à l'analyse et à la comparaison technique de trois véhicules électriques représentatifs des tendances actuelles du marché automobile :
-1. **Genesis GV60** (Corée du Sud) : Cocon de luxe technologique, plateforme 800V E-GMP, amortissement piloté par caméra prédictive (Preview ECS) et insonorisation de premier plan.
-2. **XPENG G6** (Chine) : Rupture technologique, architecture ultra-rapide 800V SiC (pic 451 kW, charge 10–80 % en 12–15 min) et châssis monobloc moulé en Gigacasting.
-3. **Renault Scénic E-Tech** (France) : Voiture de l'Année, compromis européen idéal (masse sous 1 890 kg, autonomie jusqu'à 625 km WLTP) avec écosystème multimédia Google OpenR Link.
+## Technologies
+HTML5, CSS3 et JavaScript sans framework.
 
----
+## Fonctionnalités
+- Bascule FR/EN persistante avec `localStorage`.
+- Carrousel 3D JavaScript.
+- Carrousel 3D CSS pur.
+- Hub technique dynamique.
+- Comparatif dynamique par critère.
+- FAQ accordéon.
+- Formulaire de contact avec validation côté client.
+- Galerie d'images et lecteur vidéo HTML5.
+- Responsive PC / tablette / smartphone.
 
-##  Pourquoi ce projet est-il utile ?
-* **Vulgarisation technique avancée :** Il synthétise et met à la portée du grand public des notions souvent complexes (architectures 400V vs 800V, carbure de silicium SiC, suspension prédictive, insonorisation acoustique active RANC).
-* **Comparateur pragmatique :** Grâce à un tableau de bord interactif par télémétrie (recharge, confort, multimédia, budget), il offre un outil d'aide à la décision impartial basé sur des données constructeurs et des essais réels.
-* **Intégration multimédia :** Centralisation d'essais vidéo spécialisés de la presse automobile (Le Vendeur Automobiles, Caradisiac) pour valider les analyses sur piste et route.
+## Tests
+Les procédures de test sont documentées sur `technologies.html` et couvrent langue, navigation, comparatif, formulaire et responsive.
 
----
+## Sécurité
+Le projet évite le stockage de données sensibles dans JavaScript, utilise `rel="noopener"` pour les liens externes ouverts dans un nouvel onglet et prévoit HTTPS ainsi qu'une validation serveur pour un véritable traitement du formulaire.
 
-##  Architecture Technique
-* **HTML5 sémantique :** Structure claire sans éléments superflus, balisage accessible (`<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`).
-* **CSS3 moderne :** Découpage dans un fichier externe (`style.css`), utilisation de variables CSS (`:root`), mise en page en Flexbox et CSS Grid, design sombre « Dark Cockpit » et animations fluides.
-* **JavaScript ES6 :** Fichier séparé (`script.js`) gérant :
-  * Un carrousel avec défilement automatique synchronisé sur onglets cliquables.
-  * Un hub interactif affichant les brevets technologiques et dispositifs ADAS par constructeur.
-  * Un studio comparatif dynamique par thématiques techniques.
-  * Des accordéons déroulants pour retracer l'historique des constructeurs.
-* **Hébergement & Déploiement :** Intégration continue via **GitHub Pages**.
+## Hébergement et GitHub
+Le dossier est prêt à être envoyé sur InfinityFree et dans un dépôt GitHub. Ces deux opérations nécessitent les comptes du propriétaire du projet et sont donc à effectuer depuis ses propres accès.
